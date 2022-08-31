@@ -1,13 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
-vector<int> e[1000];
+vector<int> graph[1000];
 bool visited[1000];
 void dfs(int vertex)
 {
 
     visited[vertex] = true;
-    for (int child : e[vertex])
+    for (int child : graph[vertex])
     {
         cout << vertex << " child " << child << endl;
         if (visited[child])
@@ -27,8 +27,8 @@ int main()
 
         cin >> v1 >> v2;
 
-        e[v1].push_back(v2);
-        e[v2].push_back(v1);
+        graph[v1].push_back(v2);
+        graph[v2].push_back(v1);
     }
 
     dfs(1);
