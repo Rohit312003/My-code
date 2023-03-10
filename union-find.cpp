@@ -53,7 +53,7 @@ void Union(int a, int b)
 
         if (size[a] < size[b])
         {
-            // union by rank
+            // union by size
             swap(a, b);
             parent[b] = a;
             size[a] = b;
