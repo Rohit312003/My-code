@@ -58,7 +58,9 @@ void Union(int a, int b)
             swap(a, b);
             parent[b] = a;
             size[a] = b;
-        }
+        }else{
+             parent[b] = a;
+            size[a] = b;
     }
 }
 int main()
